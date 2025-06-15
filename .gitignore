@@ -1,0 +1,5 @@
+ai-chatbot/server/uploads/*
+!ai-chatbot/server/uploads/.gitkeep
+ai-chatbot/server/chroma_db/*
+!ai-chatbot/server/chroma_db/.gitkeep
+ai-chatbot/server/chromedriver
