@@ -26,6 +26,8 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # --- Route to serve the frontend UI ---
 @app.route('/')
 def index():
+
+    kb.clear()  # Clear the knowledge base on each new session
     return send_from_directory('static', 'index.html')
 
 
@@ -131,13 +133,13 @@ def chat():
             context = "\n\n".join(relevant_chunks)
        
         final_user_prompt = f"""
-        Answer the following question based only on the provided context.
-        If the context does not contain the answer, say "I'm sorry, I couldn't find an answer in the provided documents."
-
+        You are a helpful assistant. Answer the user query. Refer to the context provided below. Give
+        the answer as per the context as much as possible. 
+        
         Context:
         {context}
 
-        Question:
+        User Query:
         {user_query}
         """
 
