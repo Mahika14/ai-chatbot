@@ -1,0 +1,119 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.container {
+    width: 100%;
+    max-width: 800px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+h1, h2 {
+    color: #1a73e8;
+}
+input[type="text"], input[type="file"] {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #155ab6;
+}
+.status-message {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+#chat-box {
+    height: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+.message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 18px;
+    max-width: 80%;
+}
+.user-message {
+    background-color: #e0e0e0;
+    align-self: flex-end;
+    margin-left: auto;
+}
+.ai-message {
+    background-color: #d0e0f8;
+    align-self: flex-start;
+}
+.input-area {
+    display: flex;
+}
+#chat-input {
+    flex-grow: 1;
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
+.input-area {
+    display: flex;
+    align-items: center; /* Vertically align items */
+}
+
+.file-upload-label {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 0 12px;
+    color: #5f6368;
+}
+
+.file-upload-label:hover {
+    color: #1a73e8;
+}
+
+#staged-files-area {
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.staged-file {
+    display: inline-block;
+    background-color: #e8e8e8;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    resize: vertical;
+    line-height: 1.5;
+    max-height: 150px;
+}

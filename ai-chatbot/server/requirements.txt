@@ -1,0 +1,10 @@
+Flask
+requests
+beautifulsoup4
+PyPDF2
+selenium
+google-generativeai
+langchain
+chromadb
+langchain-chroma
+langchain-google-genai

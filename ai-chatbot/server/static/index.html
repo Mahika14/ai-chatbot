@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Chat</h1>
+
+        <div class="chat-section card">
+            <div id="chat-box">
+                <div class="message ai-message">
+                    <p>Welcome! Ask a question, or attach documents (.txt, .pdf, or a Google Doc link) with your question to build the knowledge base.</p>
+                </div>
+            </div>
+            <div id="staged-files-area"></div>
+            <div class="input-area">
+                <label for="file-input" class="file-upload-label">📎</label>
+                <input type="file" id="file-input" multiple accept=".txt,.pdf" style="display: none;">
+   
+                <textarea id="chat-input" placeholder="Type your message..." rows="1"></textarea>
+   
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
