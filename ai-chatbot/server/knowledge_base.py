@@ -1,6 +1,5 @@
 
 import os
-import shutil
 import logging
 import google.generativeai as genai
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -68,17 +67,3 @@ class KnowledgeBase:
 
         relevant_docs = self.vector_store.similarity_search(user_question)
         return [doc.page_content for doc in relevant_docs]
-    
-    def clear(self):
-        """
-        Deletes the persistent vector store directory and re-initializes an empty store.
-        """
-        if os.path.exists(self.persist_directory):
-            logger.info(f"Clearing knowledge base by deleting directory: {self.persist_directory}")
-            shutil.rmtree(self.persist_directory)
-       
-        self.vector_store = Chroma(
-            persist_directory=self.persist_directory,
-            embedding_function=self.embedding_model
-        )
-        logger.info("Knowledge base cleared and re-initialized.")

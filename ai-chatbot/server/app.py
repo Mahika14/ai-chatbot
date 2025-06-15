@@ -26,8 +26,6 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # --- Route to serve the frontend UI ---
 @app.route('/')
 def index():
-
-    kb.clear()  # Clear the knowledge base on each new session
     return send_from_directory('static', 'index.html')
 
 
