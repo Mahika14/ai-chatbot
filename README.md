@@ -64,7 +64,9 @@ ai-chatbot/
     ```
 4.  **Google API Key:**
     Ensure you have a Google API key for the Gemini LLM. Set this as an environment variable.
-    export GOOGLE_API_KEY=<your api key>
+    ```bash
+    export GOOGLE_API_KEY="your api key"
+    ```
 
 5.  **Download ChromeDriver:**
     *   Determine the version of Google Chrome installed on your system.
